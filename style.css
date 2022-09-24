@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent), url(/images/background.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 0 8%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+.logo {
+    cursor: pointer;
+    width: 120px;
+}
+
+.cart-icon {
+    cursor: pointer;
+    width: 30px;
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1rem;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    background: whitesmoke;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    color: whitesmoke;
+    position: absolute;
+    bottom: 8%;
+}
+
+.text-box p {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.text-box h1 {
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(/images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+
+
+.text-box h3 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.text-box .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.text-box a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 20px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+}
+
+
+.text-box a span {
+    font-size: 30px;
+    line-height: 15px;
+    margin-left: 5px;
+}
+
+.social-icon {
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+}
+
+.social-icon img {
+    width: 25px;
+    display: block;
+    margin: 25px 5px;
+}
